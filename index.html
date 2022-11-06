@@ -24,16 +24,16 @@
           <ul>
             <li>
               <label for="username">Your name</label>
-              <input type="text" name="user-name" id="username" />
+              <input type="text" name="user-name" id="username" required />
             </li>
 
             <li>
               <label for="useremail">Your email address</label>
-              <input type="email" name="user-email" id="useremail" />
+              <input type="email" name="user-email" id="useremail" required/>
             </li>
             <li>
               <label for="password">Password </label>
-              <input type="password" name="user-password" id="password" />
+              <input type="password" name="user-password" id="password" required minlength='8'/>
             </li>
           </ul>
         </section>
@@ -42,11 +42,11 @@
           <ul>
             <li>
               <label for="userage">Your age</label>
-              <input type="number" step="2" name="user-age" id="userage" />
+              <input type="number" step="2" name="user-age" id="userage" required min='18'/>
             </li>
             <li>
               <label for="birthday">Date</label>
-              <input type="date" name="user-birthday" id="birthday" />
+              <input type="date" name="user-birthday" id="birthday" required min='1921-01-01'max='2004-01-01'/>
             </li>
             <li>
               <label for="favourite-color">Favourite color</label>
@@ -67,20 +67,15 @@
           <h2>How should we verify your account?</h2>
           <ul>
             <li class="form-control-inline">
-              <input
-                type="radio"
-                name="verify"
-                id="verify-SMS"
-                value="text-message"
-              />
+              <input type="radio" name="verify" id="verify-SMS" value="text-message" required/>
               <label for="verify-SMS">Via text message (SMS)</label>
             </li>
               <li class="form-control-inline">
-              <input type="radio" name="verify" id="verify-call" value="phone-call" />
+              <input type="radio" name="verify" id="verify-call" value="phone-call" required/>
               <label for="verify-call">Via a phone call</label>
             </li>
             <li class="form-control-inline">
-              <input type="radio" name="verify" id="verify-email" value="email" />
+              <input type="radio" name="verify" id="verify-email" value="email" required/>
               <label for="verify-email">Via an email</label>
             </li>
           </ul>
@@ -119,14 +114,16 @@
           </ul>
 
         </section>
+        <hr>
         <section>
           <div class="form-control-inline">
-            <input type="checkbox" id="agree-terms" name="terms" />
-            <label for="agree-terms">Agree terms</label>
+            <input type="checkbox" id="agree-terms" name="terms" required/>
+            <label for="agree-terms">Agree terms and conditions</label>
           </div>
         </section>
-        <section>
-          <button>Submit</button>
+        <section class="button">
+          <button type="reset">Clear data</button>
+          <button type="submit">Submit</button>
         </section>
         </form>
       </main>
