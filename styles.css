@@ -4,6 +4,15 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  text-align: center;
+  color: white;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 form {
   width: 30rem;
   margin: 3rem auto;
@@ -17,7 +26,9 @@ label {
   display: block;
 }
 
-input {
+input,
+textarea,
+select {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
@@ -28,7 +39,8 @@ input {
   color: rgb(61, 58, 58);
 }
 
-input:focus {
+input,
+textarea:focus {
   background-color: rgb(219, 190, 253);
   color: rgb(21, 5, 63);
   border-color: rgb(32, 5, 63);
@@ -55,6 +67,6 @@ button:hover {
 }
 
 .form-control-inline input {
-  width:auto;
-  margin-right:0.5rem;
+  width: auto;
+  margin-right: 0.5rem;
 }
